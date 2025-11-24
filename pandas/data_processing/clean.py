@@ -1,9 +1,12 @@
 import pandas as pd
 import logging
 
-def dropnas(df: pd.DataFrame) -> pd.DataFrame:
-    # In pandas, this directly maps to the Dataframe.dropna function.
-    # This function demos different common parameter combinations and usecases for dropna.
+def drop_problematic_data(df: pd.DataFrame) -> pd.DataFrame:
+    ########################################################################################
+    # We first drop NAs based on criteria.                                                 #
+    # In pandas, this directly maps to the Dataframe.dropna function.                      #
+    # This function demos different common parameter combinations and usecases for dropna. #
+    ########################################################################################
 
     # drop all rows (indexes) with any column value being NA
     '''
@@ -22,6 +25,28 @@ def dropnas(df: pd.DataFrame) -> pd.DataFrame:
     '''
     df = df.dropna(axis='columns')
     '''
+
+
+    #######################################################################################
+    # Now we drop potential duplicated rows                                               #
+    # In pandas, this maps to the Dataframe.drop_duplicates function.                     #
+    # This function demos different common  usecases for drop_duplicates.                 #
+    #######################################################################################
+
+    # drop a duplicated row if all columns have the same value
+    '''
+    df = df.drop_duplicates()
+    '''
+
+    # drop a duplicated row, but keep the last duplicate rather than the first
+    '''
+    df = df.drop_duplicates(keep='last')
+    '''
+
+    # drop a duplicated row where the defined columns share same values
+    df = df.drop_duplicates(subset=['id'])
+
     return df
+
 
 
