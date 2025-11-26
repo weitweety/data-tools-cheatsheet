@@ -1,0 +1,5 @@
+[
+  {"id": 1, "name": "Katie Mcdonald", "age": 30, "city": "Boston", "salary": 80000, "department": "Engineering", "join_date": "2020-01-30"},
+  {"id": 2, "name": "Jacob Lewis", "age": 40, "city": "Seattle", "salary": 90000, "department": "Engineering", "join_date": "2018-04-21"},
+  {"id": 3, "name": "David Owen", "age": 35, "city": "Chicago", "salary": 80000, "department": "HR", "join_date": "2021-06-10"}
+]
