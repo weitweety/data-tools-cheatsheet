@@ -5,7 +5,7 @@ from typing import List
 
 def concat_data_rows(df_list: List[pd.DataFrame]) -> pd.DataFrame:
     # pd.concat() is common when we need to concat two data frames
-    # along index or columns
+    # along index or columns. To concat along columns, set axis=1
 
     # simply concat the dfs on index axis. Keep the original index
     # if there are duplicate indexes across dfs then the output will keep the indexes
